@@ -28,9 +28,9 @@ module.exports = {
             partitura.update(req.body, res);
         });
 
-        // app.delete('/usuario/:id/', function(req, res) {
-        //     usuario.delete(req.params.id, res);
-        // });
+        app.delete('/partitura/:id/', function(req, res) {
+            partitura.remove(req.params.id, res);
+        });
 
 
         // // M E N S A G E M 

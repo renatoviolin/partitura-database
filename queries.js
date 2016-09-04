@@ -52,9 +52,21 @@ function update(partitura, res) {
       });
 }
 
+function remove(id, res) {
+   db.result('delete from tb_partitura where id = $1', id)
+      .then(function() {
+         res.send({ status: 0, message: 'Partitura delete successfully' });
+      })
+      .catch(function(err) {
+         console.log(err);
+         res.send({ status: 1, message: 'Partitura delete failed' });
+      });
+}
+
 module.exports = {
    get: get,
    getById: getById,
    create: create,
-   update: update
+   update: update,
+   remove: remove
 };
