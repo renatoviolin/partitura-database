@@ -1,0 +1,75 @@
+<html ng-app="App">
+
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+   <script src="js/controllers.js"></script>
+
+</head>
+
+<body ng-controller="PartituraController">
+   <div class="panel panel-default panel-primary">
+      <div class="panel-heading ">
+         <h2 class="panel-title">Mensagem</h2>
+      </div>
+      <div class="panel-body">
+
+         <div class="form-group">
+            <label>Título:</label>
+            <input name="titulo" class="form-control" ng-model="dados.conteudo" />
+         </div>
+<!-- 
+         <div class="form-group">
+            <label>Mensagem:</label>
+            <textarea name="mensagem" class="form-control" ng-model="dados.mensagem"> </textarea>
+         </div>
+
+         <div class="form-group">
+            <label>Categoria:</label>
+            <select class="form-control" ng-model="dados.categoria">
+               <option value="calendario">Calendário</option>
+               <option value="coordenacao">Coordenação</option>
+               <option value="secretaria">Secretaria</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label>Link:</label>
+            <input name="titulo" class="form-control" ng-model="dados.link" />
+         </div>
+      </div>
+   </div> -->
+
+   <!-- painel para escolher alunos -->
+
+<!--    <div class="panel panel-default panel-primary">
+      <div class="panel-heading ">
+         <h2 class="panel-title">Alunos</h2>
+      </div>
+      <div class="panel-body">
+         <table class="table table-hover table-striped table-bordered">
+            <thead>
+               <tr>
+                  <th>RA</th>
+                  <th>Token</th>
+                  <th ng-click="marcar_todos()">Enviar</th>
+               </tr>
+            </thead>
+            <tr ng-repeat="item in dados.alunos">
+               <td>{{item.ra}}</td>
+               <td>{{item.token}}</td>
+               <td>
+                  <input type="checkbox" ng-model="item.selected" />
+               </td>
+            </tr>
+
+         </table>
+      </div>
+   </div> -->
+
+   <!-- <input type="button" class="btn btn-primary" value="Enviar Mensagens" ng-click="btn_enviar()" /> -->
+   <input type="button" class="btn btn-primary" value="Gravar Mensagem" ng-click="btn_gravar()" />
+
+</body>
+
+</html>
